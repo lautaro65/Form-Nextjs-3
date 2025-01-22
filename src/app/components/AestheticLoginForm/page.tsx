@@ -27,14 +27,14 @@ const AestheticLoginForm: React.FC = () => {
     placeholder: string;
     type?: string;
   }) => (
-    <div className="relative w-full mb-4">
+    <div className="relative w-full mb-2 ">
       <div className="absolute left-3 top-1/2 -translate-y-1/2 text-white/70">
         <Icon size={20} />
       </div>
       <input
         type={type}
         placeholder={placeholder}
-        className="w-full py-3 px-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-white/70 focus:outline-none focus:border-white/40 transition-colors"
+        className="w-full h-10 py-3 px-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-white/70 focus:outline-none focus:border-white/40 transition-colors"
       />
     </div>
   );
@@ -71,15 +71,15 @@ const AestheticLoginForm: React.FC = () => {
             animate="visible"
             exit="exit"
             transition={{ duration: 0.4 }}
-            className="w-full max-w-md p-8 rounded-3xl bg-white/10 backdrop-blur-md border border-white/20 shadow-xl"
+            className="w-full max-w-md p-4 rounded-3xl bg-white/10 backdrop-blur-md border border-white/20 shadow-xl max-h-[310px] "
             style={{
               backfaceVisibility: "hidden", // Evita mostrar el reverso no deseado
             }}
           >
-            <h1 className="text-3xl font-bold text-white text-center mb-8">
+            <h1 className="text-3xl font-bold text-white text-center mb-4">
               {isFlipped ? "Register" : "Login"}
             </h1>
-            <form className="space-y-4">
+            <form className="space-y-2">
               <InputField icon={User} placeholder="Username" />
               {isFlipped && <InputField icon={Mail} placeholder="Email" />}
               <InputField icon={Lock} placeholder="Password" type="password" />
