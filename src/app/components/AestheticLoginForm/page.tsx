@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { User, Lock, Mail } from "lucide-react";
+import { LucideIcon } from "lucide-react";
 
 const generateStars = (count: number) => {
   return Array.from({ length: count }, (_, i) => ({
@@ -17,18 +18,12 @@ const stars = generateStars(50);
 const AestheticLoginForm: React.FC = () => {
   const [isFlipped, setIsFlipped] = useState(false);
 
-  const containerVariants = {
-    hidden: { rotateY: 180 },
-    visible: { rotateY: 0 },
-    exit: { rotateY: 180 },
-  };
-
   const InputField = ({
     icon: Icon,
     placeholder,
     type = "text",
   }: {
-    icon: any;
+    icon: LucideIcon; // Tipo específico para los íconos de lucide-react
     placeholder: string;
     type?: string;
   }) => (
